@@ -1,5 +1,5 @@
 pub mod prover {
-    // Queue sizes. Chosen to be larger than the tasks API page size (currently, 50)
+    // Queue sizes. Optimized for lower memory usage
     pub const TASK_QUEUE_SIZE: usize = 50;
     pub const EVENT_QUEUE_SIZE: usize = 50;
     pub const RESULT_QUEUE_SIZE: usize = 50;

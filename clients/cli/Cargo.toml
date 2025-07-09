@@ -32,6 +32,17 @@ lto = false
 codegen-units = 256
 incremental = true
 
+# Memory-optimized profile for low-memory environments
+[profile.memory-opt]
+inherits = "release"
+opt-level = "s"        # Optimize for size instead of speed
+lto = "thin"           # Thin LTO for faster builds with some optimization
+codegen-units = 16     # More codegen units for parallel compilation
+panic = 'abort'        # Abort on panic (smaller binaries)
+strip = true           # Strip symbols for smaller binaries
+debug = false          # No debug symbols to save memory
+overflow-checks = false # Disable overflow checks for smaller code
+
 [dependencies]
 async-trait = "0.1.88"
 cfg-if = "1.0"
