@@ -1,8 +1,8 @@
 pub mod prover {
     // Queue sizes. Chosen to be larger than the tasks API page size (currently, 50)
-    pub const TASK_QUEUE_SIZE: usize = 100;
-    pub const EVENT_QUEUE_SIZE: usize = 100;
-    pub const RESULT_QUEUE_SIZE: usize = 100;
+    pub const TASK_QUEUE_SIZE: usize = 50;
+    pub const EVENT_QUEUE_SIZE: usize = 50;
+    pub const RESULT_QUEUE_SIZE: usize = 50;
 
     // Task fetching thresholds
     pub const BATCH_SIZE: usize = TASK_QUEUE_SIZE / 5; // Fetch this many tasks at once

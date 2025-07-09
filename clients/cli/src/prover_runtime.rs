@@ -17,7 +17,7 @@ use tokio::sync::{broadcast, mpsc};
 use tokio::task::JoinHandle;
 
 /// Maximum number of completed tasks to keep in memory. Chosen to be larger than the task queue size.
-const MAX_COMPLETED_TASKS: usize = 500;
+const MAX_COMPLETED_TASKS: usize = 100;
 
 /// Starts authenticated workers that fetch tasks from the orchestrator and process them.
 pub async fn start_authenticated_workers(
